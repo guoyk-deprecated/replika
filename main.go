@@ -118,9 +118,10 @@ func main() {
 			continue
 		}
 		jobs = append(jobs, Job{
-			Pull: optPull,
-			Push: optPush,
-			Src:  path.Join(optSrc, name),
+			Config: optDockerConfig,
+			Pull:   optPull,
+			Push:   optPush,
+			Src:    path.Join(optSrc, name),
 			Dst: gg.Map(destinations, func(s string) string {
 				return path.Join(s, name)
 			}),
