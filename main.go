@@ -74,8 +74,8 @@ func main() {
 		optConcurrency  int
 	)
 
-	flag.IntVar(&optConcurrency, "c", 5, "concurrency")
 	flag.StringVar(&optFile, "f", "IMAGES.txt", "images file")
+	flag.IntVar(&optConcurrency, "c", 5, "concurrency")
 	flag.StringVar(&optSrc, "src", "", "source registry")
 	flag.StringVar(&optDst, "dst", "", "destination registries, comma seperated")
 	flag.BoolVar(&optPull, "pull", false, "pull from source registry")
