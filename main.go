@@ -147,7 +147,7 @@ func main() {
 		go func() {
 			defer wg.Done()
 			<-pg
-			go func() {
+			defer func() {
 				pg <- struct{}{}
 			}()
 			eg.Set(i, job.Execute(context.Background()))
